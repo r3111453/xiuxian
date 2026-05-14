@@ -24,11 +24,12 @@ jobs:
         run: npm install
       - name: Build
         run: npm run build
+      - name: List dist contents  # 新增這一步，用來檢查 dist 資料夾
+        run: ls -la dist
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # 重點：上傳 dist 資料夾的內容
-          path: './dist' 
+          path: './dist'  # 確保這行指向 dist 資料夾
 
   deploy:
     environment:
