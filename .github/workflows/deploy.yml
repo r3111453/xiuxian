@@ -27,7 +27,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist'
+          # 重點：上傳 dist 資料夾的內容
+          path: './dist' 
 
   deploy:
     environment:
