@@ -3,10 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>修仙游戏</title>
+    <title>修仙游戏 - 測試</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.js"></script>
+    <div id="app">
+      <h1>如果看到這行字，代表 Vue 沒有成功掛載</h1>
+      <p>原因是：<span id="error-message">尚未偵測到錯誤</span></p>
+    </div>
+    <script>
+      // 這是純 JavaScript 測試，不依賴 Vue
+      document.getElementById('error-message').innerText = '純 JS 有執行，但 Vue 沒有啟動';
+      console.log('測試 script 有執行');
+    </script>
+    <script type="module" crossorigin src="./assets/index-262765e4.js"></script>
+    <link rel="stylesheet" href="./assets/index-c34c0cd9.css">
   </body>
 </html>
